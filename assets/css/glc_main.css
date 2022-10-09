@@ -1,0 +1,126 @@
+/**
+ * ===================================================
+ * START: Remove default loader on WooCommerce checkout page
+ * ===================================================
+ */
+.woocommerce .blockUI.blockOverlay {
+  position: relative! important;
+  display: none! important;
+}
+/**
+ * ===================================================
+ * END: Remove default loader on WooCommerce checkout page
+ * ===================================================
+ */
+
+
+
+/**
+ * ===================================================
+ * START: Loader Positioning Styles
+ * ===================================================
+ */
+.loader-parent {
+	position: relative;
+}
+.custom-loader {
+	position: absolute;
+	top:20%;
+	left:50%;
+	height: 100%;
+	width: 100%;
+}
+/**
+ * ===================================================
+ * END: Loader Positioning Styles
+ * ===================================================
+ */
+
+
+
+/**
+ * ===================================================
+ * START: Loader Dot Pulse Style
+ * ===================================================
+ */
+.dot-pulse {
+	position: relative;
+	left: -9999px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #aaaaaa;
+	color: #aaaaaa;
+	box-shadow: 9999px 0 0 -5px #aaaaaa;
+	animation: dotPulse 1.5s infinite linear;
+	animation-delay: .25s;
+
+}
+
+.dot-pulse::before, .dot-pulse::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #aaaaaa;
+	color: #aaaaaa;
+}
+
+.dot-pulse::before {
+	box-shadow: 9984px 0 0 -5px #aaaaaa;
+	animation: dotPulseBefore 1.5s infinite linear;
+	animation-delay: 0s;
+}
+
+.dot-pulse::after {
+	box-shadow: 10014px 0 0 -5px #aaaaaa;
+	animation: dotPulseAfter 1.5s infinite linear;
+	animation-delay: .5s;
+}
+
+@keyframes dotPulseBefore {
+	0% {
+		box-shadow: 9984px 0 0 -5px #aaaaaa;
+	}
+	30% {
+		box-shadow: 9984px 0 0 2px #aaaaaa;
+	}
+	60%,
+	100% {
+		box-shadow: 9984px 0 0 -5px #aaaaaa;
+	}
+}
+
+@keyframes dotPulse {
+	0% {
+		box-shadow: 9999px 0 0 -5px #aaaaaa;
+	}
+	30% {
+		box-shadow: 9999px 0 0 2px #aaaaaa;
+	}
+	60%,
+	100% {
+		box-shadow: 9999px 0 0 -5px #aaaaaa;
+	}
+}
+
+@keyframes dotPulseAfter {
+	0% {
+		box-shadow: 10014px 0 0 -5px #aaaaaa;
+	}
+	30% {
+		box-shadow: 10014px 0 0 2px #aaaaaa;
+	}
+	60%,
+	100% {
+		box-shadow: 10014px 0 0 -5px #aaaaaa;
+	}
+}
+/**
+ * ===================================================
+ * END: Loader Dot Pulse Style
+ * ===================================================
+ */
